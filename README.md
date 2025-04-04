@@ -23,12 +23,12 @@ source ~/.bashrc
 
 Copy file
 ```bash
-cat file.txt | bash-clipboard -c 
+cat file.txt | clipboard -c 
 ```
 
 Paste file
 ```bash
-bash-clipboard -p > file.txt
+clipboard -p > file.txt
 ```
 
 
