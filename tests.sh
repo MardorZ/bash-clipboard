@@ -6,7 +6,7 @@ echo "🧪 Running clipboard tests..."
 
 TEST_INPUT="test_input.txt"
 TEST_OUTPUT="test_output.txt"
-CLIPBOARD_CMD="clipboard"
+CLIPBOARD_CMD="./bash-clipboard"
 TMP_FILE="/tmp/clipboard_buffer"
 
 # Create test file
