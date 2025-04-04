@@ -1,38 +1,43 @@
-# bash-clipboard
-A clipboard for copy and pasting files in bash.
+# bash-clipboard  
+A simple clipboard tool for copying and pasting file contents in bash using a temporary file.
 
-## Build
+## 🛠️ Build
 
-Build it from source:
+Compile the source:
+
 ```bash
 g++ -o bash-clipboard bashclipboard.cpp
 ```
 
-move the binary to /usr/local/bin/clipboard
+Move the binary to a global location:
+
 ```bash
 sudo mv bash-clipboard /usr/local/bin/clipboard
 ```
 
-add /usr/local/bin to path (if missing)
+Ensure `/usr/local/bin` is in your PATH (if not already):
+
 ```bash
 echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## Usage
+## 📋 Usage
 
-Copy file
+Copy a file:
+
 ```bash
-cat file.txt | clipboard -c 
+cat file.txt | clipboard -c
 ```
 
-Paste file
+Paste the contents:
+
 ```bash
 clipboard -p > file.txt
 ```
 
+## 🧼 Notes
 
-
-
-
-
+- Clipboard content is stored in `/tmp/clipboard_buffer`.
+- Works for binary files too.
+- Temp data is not encrypted — use with care.
