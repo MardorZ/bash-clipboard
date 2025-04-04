@@ -20,4 +20,4 @@ jobs:
       run: make
 
     - name: Run tests
-      run: ./test.sh
+      run: ./tests.sh
