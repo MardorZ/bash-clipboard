@@ -5,7 +5,7 @@ A clipboard for copy and pasting files in bash.
 
 Build it from source:
 ```bash
-g++ -o bash-clipboard main.cpp
+g++ -o bash-clipboard bashclipboard.cpp
 ```
 
 ## Usage
