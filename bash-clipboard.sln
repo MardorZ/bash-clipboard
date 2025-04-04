@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bash-clipboard", "bash-clipboard\bash-clipboard.vcxproj", "{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{F789BAE1-9BC1-4FEA-BE4C-2E7F5BFDF25B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Debug|Win32.ActiveCfg = Debug|Win32
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Debug|Win32.Build.0 = Debug|Win32
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Debug|x64.ActiveCfg = Debug|x64
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Debug|x64.Build.0 = Debug|x64
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Release|Win32.ActiveCfg = Release|Win32
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Release|Win32.Build.0 = Release|Win32
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Release|x64.ActiveCfg = Release|x64
+		{574CD262-2B5D-4BC1-9FE8-67E99D8FB921}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+EndGlobal
