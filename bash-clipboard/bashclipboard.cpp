@@ -2,19 +2,31 @@
 #include <fstream>
 #include <string>
 
-// Define a temporary file path to simulate clipboard storage
 const std::string kTempClipboardFile = "/tmp/clipboard_buffer";
 
+void printHelp() {
+    std::cout << R"(Usage: clipboard [OPTION]
+
+Options:
+  -c        Copy from stdin to clipboard
+  -p        Paste clipboard content to stdout
+  --help    Show this help message
+)";
+}
+
 int main(int argc, char* argv[]) {
-    // Check for correct number of arguments
     if (argc != 2) {
-        std::cerr << "Usage: clipboard -c | -p\n";
+        std::cerr << "Usage: clipboard -c | -p | --help\n";
         return 1;
     }
 
     std::string mode = argv[1];
 
-    // COPY MODE: Read from stdin, write to temp clipboard file
+    if (mode == "--help") {
+        printHelp();
+        return 0;
+    }
+
     if (mode == "-c") {
         std::ofstream out(kTempClipboardFile, std::ios::binary);
         if (!out) {
@@ -22,7 +34,6 @@ int main(int argc, char* argv[]) {
             return 1;
         }
 
-        // Disable whitespace skipping and copy input byte-by-byte
         std::cin >> std::noskipws;
         char c;
         while (std::cin >> c) {
@@ -35,7 +46,6 @@ int main(int argc, char* argv[]) {
             return 1;
         }
 
-        // PASTE MODE: Read from temp clipboard file and write to stdout
     } else if (mode == "-p") {
         std::ifstream in(kTempClipboardFile, std::ios::binary);
         if (!in) {
@@ -43,10 +53,10 @@ int main(int argc, char* argv[]) {
             return 1;
         }
 
-        std::cout << in.rdbuf();  // Stream file directly to stdout
+        std::cout << in.rdbuf();
 
     } else {
-        std::cerr << "Error: Unknown option '" << mode << "'. Use -c or -p.\n";
+        std::cerr << "Error: Unknown option '" << mode << "'. Use -c, -p or --help.\n";
         return 1;
     }
 
