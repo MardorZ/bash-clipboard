@@ -2,8 +2,8 @@
 
 CXX = g++
 CXXFLAGS = -Wall -Wextra -O2
-TARGET = bash-clipboard
-SRC = bash-clipboard/bashclipboard.cpp  # <--- updated path
+TARGET = clipboard          # was: bash-clipboard
+SRC = bash-clipboard/bashclipboard.cpp
 
 all: $(TARGET)
 
