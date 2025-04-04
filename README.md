@@ -3,7 +3,7 @@ A simple clipboard tool for copying and pasting file contents in bash using a te
 
 ## 🛠️ Build
 
-Compile the source:
+### Option 1: Manual build
 
 ```bash
 g++ -o bash-clipboard bashclipboard.cpp
@@ -13,6 +13,14 @@ Move the binary to a global location:
 
 ```bash
 sudo mv bash-clipboard /usr/local/bin/clipboard
+```
+
+### Option 2: Using Makefile
+
+```bash
+make          # builds bash-clipboard
+make install  # moves it to /usr/local/bin/clipboard
+make clean    # removes the binary
 ```
 
 Ensure `/usr/local/bin` is in your PATH (if not already):
@@ -34,6 +42,12 @@ Paste the contents:
 
 ```bash
 clipboard -p > file.txt
+```
+
+Show help:
+
+```bash
+clipboard --help
 ```
 
 ## 🧼 Notes
