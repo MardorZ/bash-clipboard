@@ -35,10 +35,7 @@ int main(int argc, char* argv[]) {
         }
 
         std::cin >> std::noskipws;
-        char c;
-        while (std::cin >> c) {
-            out.put(c);
-        }
+        out << std::cin.rdbuf();
 
         out.close();
         if (!out) {
